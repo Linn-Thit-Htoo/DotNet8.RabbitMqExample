@@ -1,21 +1,20 @@
-﻿namespace DotNet8.RabbitMqExample.Producer.Controllers
+﻿namespace DotNet8.RabbitMqExample.Producer.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class MessageController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class MessageController : ControllerBase
+    private readonly IMessageProducer _producer;
+
+    public MessageController(IMessageProducer producer)
     {
-        private readonly IMessageProducer _producer;
+        _producer = producer;
+    }
 
-        public MessageController(IMessageProducer producer)
-        {
-            _producer = producer;
-        }
-
-        [HttpPost]
-        public IActionResult SendMessage([FromBody] BlogModel blog)
-        {
-            _producer.SendMessage(blog);
-            return Ok("Success.");
-        }
+    [HttpPost]
+    public IActionResult SendMessage([FromBody] BlogModel blog)
+    {
+        _producer.SendMessage(blog);
+        return Ok("Success.");
     }
 }
