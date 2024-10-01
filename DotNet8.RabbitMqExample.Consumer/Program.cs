@@ -1,6 +1,6 @@
-﻿using RabbitMQ.Client.Events;
-using RabbitMQ.Client;
-using System.Text;
+﻿global using RabbitMQ.Client.Events;
+global using RabbitMQ.Client;
+global using System.Text;
 
 var factory = new ConnectionFactory { HostName = "localhost" };
 var connection = factory.CreateConnection();
