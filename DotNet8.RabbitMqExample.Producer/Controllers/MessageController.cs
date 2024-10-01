@@ -1,5 +1,5 @@
-﻿using DotNet8.RabbitMqExample.Producer.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿global using DotNet8.RabbitMqExample.Producer.Models;
+global using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet8.RabbitMqExample.Producer.Controllers
 {
