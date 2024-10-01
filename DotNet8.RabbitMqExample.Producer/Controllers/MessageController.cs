@@ -1,7 +1,4 @@
-﻿global using DotNet8.RabbitMqExample.Producer.Models;
-global using Microsoft.AspNetCore.Mvc;
-
-namespace DotNet8.RabbitMqExample.Producer.Controllers
+﻿namespace DotNet8.RabbitMqExample.Producer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
