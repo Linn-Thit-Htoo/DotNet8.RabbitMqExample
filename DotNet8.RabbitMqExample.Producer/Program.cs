@@ -1,5 +1,3 @@
-using DotNet8.RabbitMqExample.Producer;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
