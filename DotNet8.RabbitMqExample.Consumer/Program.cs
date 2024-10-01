@@ -1,8 +1,4 @@
-﻿global using RabbitMQ.Client.Events;
-global using RabbitMQ.Client;
-global using System.Text;
-
-var factory = new ConnectionFactory { HostName = "localhost" };
+﻿var factory = new ConnectionFactory { HostName = "localhost" };
 var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 var routingKey = "data";
