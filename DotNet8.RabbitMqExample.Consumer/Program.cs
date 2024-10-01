@@ -8,7 +8,8 @@ channel.QueueDeclare(
     durable: false,
     exclusive: false,
     autoDelete: false,
-    arguments: null);
+    arguments: null
+);
 
 var consumer = new EventingBasicConsumer(channel);
 consumer.Received += (model, eventArgs) =>
