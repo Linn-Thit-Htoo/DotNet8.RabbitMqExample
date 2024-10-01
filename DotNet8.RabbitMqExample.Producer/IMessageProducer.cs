@@ -1,7 +1,6 @@
-﻿namespace DotNet8.RabbitMqExample.Producer
+﻿namespace DotNet8.RabbitMqExample.Producer;
+
+public interface IMessageProducer
 {
-    public interface IMessageProducer
-    {
-        void SendMessage<T>(T message);
-    }
+    void SendMessage<T>(T message);
 }
